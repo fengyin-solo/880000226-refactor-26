@@ -9,8 +9,12 @@ export const restorationHero = {
   description:
     '聚焦修复批次、控湿参数和文献归档风险，适合作为修复工作室内部业务系统的前端原型。',
   backlogLabel: '待处理批次',
-  backlogValue: '12 册',
   note: '高湿季节前优先清理虫道扩散页。',
+}
+
+// 修复室可同时处置的批次数上限；缺失时派生逻辑按无容量限制处理。
+export const restorationCapacity = {
+  maxParallelBatches: 6,
 }
 
 export const restorationBatches = [
@@ -20,6 +24,7 @@ export const restorationBatches = [
     pages: '17-29',
     risk: 'high',
     status: '补纸前',
+    backlogDays: 21,
     note: '虫道集中在装订线外沿。',
   },
   {
@@ -28,6 +33,7 @@ export const restorationBatches = [
     pages: '5-14',
     risk: 'medium',
     status: '控湿中',
+    backlogDays: 12,
     note: '需先降湿 48 小时，再进入纤维加固。',
   },
   {
@@ -36,6 +42,7 @@ export const restorationBatches = [
     pages: '1-9',
     risk: 'low',
     status: '归档前',
+    backlogDays: 6,
     note: '边角缺损明显，建议先做透明托裱。',
   },
 ]
