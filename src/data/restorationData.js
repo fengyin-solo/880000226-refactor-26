@@ -11,6 +11,10 @@ export const restorationHero = {
   backlogLabel: '待处理批次',
   backlogValue: '12 册',
   note: '高湿季节前优先清理虫道扩散页。',
+  capacity: {
+    total: 12,
+    unit: '册',
+  },
 }
 
 export const restorationBatches = [
@@ -20,6 +24,8 @@ export const restorationBatches = [
     pages: '17-29',
     risk: 'high',
     status: '补纸前',
+    backlogDays: 10,
+    volume: 5,
     note: '虫道集中在装订线外沿。',
   },
   {
@@ -28,6 +34,8 @@ export const restorationBatches = [
     pages: '5-14',
     risk: 'medium',
     status: '控湿中',
+    backlogDays: 16,
+    volume: 4,
     note: '需先降湿 48 小时，再进入纤维加固。',
   },
   {
@@ -36,6 +44,8 @@ export const restorationBatches = [
     pages: '1-9',
     risk: 'low',
     status: '归档前',
+    backlogDays: 24,
+    volume: 3,
     note: '边角缺损明显，建议先做透明托裱。',
   },
 ]
